@@ -1,0 +1,19 @@
+required = [
+    "sigs.k8s.io/controller-tools/cmd/crd",  # generate CRD YAML
+    "sigs.k8s.io/controller-tools/cmd/type-scaffold", # scaffold out types.go
+    "k8s.io/code-generator/cmd/deepcopy-gen",
+    "sigs.k8s.io/controller-runtime", # our actual controller's base library
+]
+
+[prune]
+  go-tests = true
+  unused-packages = true
+
+[[constraint]]
+    name = "sigs.k8s.io/controller-runtime"
+    branch = "master"
+
+[[constraint]]
+    name = "sigs.k8s.io/controller-tools"
+    version = "0.1.9"
+
