@@ -1,0 +1,10 @@
+apiVersion: chaosapps.metamagical.io/v1
+kind: ChaosPod
+metadata:
+  name: test1
+spec:
+  template:
+    spec:
+      containers:
+      - name: "some-container"
+        image: "k8s.gcr.io/pause-amd64:3.1"
